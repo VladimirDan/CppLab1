@@ -35,6 +35,9 @@ int main(int argc, char** argv)
 		case 6:
 			employeeDB.displayFormer();
 			break;
+		case 7:
+			employeeDB.displayAdult();
+			break;
 		case 0:
 			done = true;
 			break;
@@ -55,6 +58,7 @@ int displayMenu()
 	cout << "4) List all employees" << endl;
 	cout << "5) List all current employees" << endl;
 	cout << "6) List all previous employees" << endl;
+	cout << "7) List all adult employees" << endl;
 	cout << "0) Quit" << endl;
 	cout << endl;
 

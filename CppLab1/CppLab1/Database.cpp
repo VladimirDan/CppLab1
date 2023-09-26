@@ -84,4 +84,13 @@ namespace Records {
 			}
 		}
 	}
+
+	void Database::displayAdult() 
+	{
+		for (int i = 0; i < mNextSlot; i++) {
+			if (mEmployees[i].isAdult()) {
+				mEmployees[i].display();
+			}
+		}
+	}
 	}

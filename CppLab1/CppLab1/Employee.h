@@ -46,6 +46,9 @@ namespace Records {
 		void setPassportNumber(int number);
 		PositionCode getPositionCode();
 		void setPositionCode(PositionCode code);
+
+		bool isAdult();
+
 	private:
 		std::string mFirstName;
 		std::string mLastName;

@@ -26,6 +26,7 @@ namespace Records {
 		void displayAll();
 		void displayCurrent();
 		void displayFormer();
+		void displayAdult();
 	protected:
 		Employee mEmployees[kMaxEmployees];
 		int mNextSlot;

@@ -151,4 +151,8 @@ namespace Records {
 	void Employee::setPositionCode(PositionCode code) {
 		positionCode = code;
 	}
+
+	bool Employee::isAdult() {
+		return age >= 18;
+	}
 }
