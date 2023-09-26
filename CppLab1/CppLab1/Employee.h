@@ -1,4 +1,8 @@
 #include <iostream>
+#include <string>
+
+using namespace std;
+
 namespace Records {
 	const int kDefaultStartingSalary = 30000;
 
@@ -17,6 +21,15 @@ namespace Records {
 	{
 	public:
 		Employee();
+		Employee(string mFirstName,
+			string mLastName,
+			string fathersName,
+			int mEmployeeCode,
+			int age,
+			Sex sex,
+			string address,
+			int passportNumber,
+			PositionCode positionCode);
 		void promote(int inRaiseAmount = 1000);
 		void demote(int inDemeritAmount = 1000);
 		void hire(); // hires or re-hires the employee

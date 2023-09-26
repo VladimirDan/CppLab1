@@ -13,6 +13,28 @@ namespace Records {
 		mSalary = kDefaultStartingSalary;
 		fHired = false;
 	}
+
+	Employee::Employee(string mFirstName,
+	string mLastName,
+	string fathersName,
+	int mEmployeeCode,
+	int age,
+	Sex sex,
+	string address,
+	int passportNumber,
+	PositionCode positionCode)
+	{
+		this->mFirstName = mFirstName;
+		this->mLastName = mLastName;
+		this->fathersName = fathersName;
+		this->mEmployeeCode = mEmployeeCode;
+		this->age = age;
+		this->sex = sex;
+		this->address = address;
+		this->passportNumber = passportNumber;
+		this->positionCode = positionCode;
+	}
+
 	void Employee::promote(int inRaiseAmount)
 	{
 		setSalary(getSalary() + inRaiseAmount);
