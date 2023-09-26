@@ -12,18 +12,32 @@ namespace Records {
 	Database::~Database()
 	{
 	}
-	Employee& Database::addEmployee(string inFirstName, string inLastName)
-	{
+	Employee& Database::addEmployee(
+		string firstName,
+		string lastName,
+		string fathersName,
+		int age,
+		Sex sex,
+		string address,
+		int passportNumber,
+		PositionCode positionCode) {
+
 		if (mNextSlot >= kMaxEmployees) {
 			cerr << "There is no more room to add the new employee!" << endl;
 			throw exception();
-
 		}
+
 		Employee& theEmployee = mEmployees[mNextSlot++];
-		theEmployee.setFirstName(inFirstName);
-		theEmployee.setLastName(inLastName);
-		theEmployee.setEmployeeNumber(mNextEmployeeNumber++);
+		theEmployee.setFirstName(firstName);
+		theEmployee.setLastName(lastName);
+		theEmployee.setFathersName(fathersName);
+		theEmployee.setAge(age);
+		theEmployee.setSex(sex);
+		theEmployee.setAddress(address);
+		theEmployee.setPassportNumber(passportNumber);
+		theEmployee.setPositionCode(positionCode);
 		theEmployee.hire();
+
 		return theEmployee;
 	}
 	Employee& Database::getEmployee(int inEmployeeNumber)
@@ -70,4 +84,4 @@ namespace Records {
 			}
 		}
 	}
-}
+	}

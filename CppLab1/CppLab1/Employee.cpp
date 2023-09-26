@@ -31,12 +31,31 @@ namespace Records {
 	}
 	void Employee::display()
 	{
-		cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;
-		cout << "-------------------------" << endl;
-		cout << (fHired ? "Current Employee" : "Former Employee") << endl;
-		cout << "Employee Number: " << getEmployeeNumber() << endl;
-		cout << "Salary: $" << getSalary() << endl;
-		cout << endl;
+		cout << "Employee Information" << endl;
+		cout << "-------------------" << endl;
+		cout << "First Name: " << mFirstName << endl;
+		cout << "Last Name: " << mLastName << endl;
+		cout << "Father's Name: " << fathersName << endl;
+		cout << "Age: " << age << endl;
+		cout << "Sex: " << (sex == Sex::Male ? "Male" : "Female") << endl;
+		cout << "Address: " << address << endl;
+		cout << "Passport Number: " << passportNumber << endl;
+		cout << "Position: ";
+
+		switch (positionCode) {
+		case PositionCode::Librarian:
+			cout << "Position code - Librarian" << endl;
+			break;
+		case PositionCode::Cataloger:
+			cout << "Position code - Cataloger" << endl;
+			break;
+		case PositionCode::Archivist:
+			cout << "Position code - Archivist" << endl;
+			break;
+		default:
+			cout << "Position code - Unknown" << endl;
+			break;
+		}
 	}
 	// Accessors and setters
 	void Employee::setFirstName(string inFirstName)

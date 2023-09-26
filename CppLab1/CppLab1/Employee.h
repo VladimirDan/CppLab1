@@ -8,9 +8,9 @@ namespace Records {
 	};
 
 	enum PositionCode {
-		JuniorProgrammer,
-		MiddleProgrammer,
-		SeniorProgrammer,
+		Librarian,
+		Cataloger,
+		Archivist,
 	};
 
 	class Employee

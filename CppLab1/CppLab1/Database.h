@@ -1,5 +1,9 @@
 #include <iostream>
 #include "Employee.h"
+#include <string>
+
+using namespace std;
+
 namespace Records {
 	const int kMaxEmployees = 100;
 	const int kFirstEmployeeNumber = 1000;
@@ -8,7 +12,15 @@ namespace Records {
 	public:
 		Database();
 		~Database();
-		Employee& addEmployee(std::string inFirstName, std::string inLastName);
+		Employee& addEmployee(
+			string firstName,
+			string lastName,
+			string fathersName,
+			int age,
+			Sex sex,
+			string address,
+			int passportNumber,
+			PositionCode positionCode);
 		Employee& getEmployee(int inEmployeeNumber);
 		Employee& getEmployee(std::string inFirstName, std::string inLastName);
 		void displayAll();

@@ -62,21 +62,45 @@ int displayMenu()
 	cin >> selection;
 	return selection;
 }
-void doHire(Database& inDB)
-{
+void doHire(Database& inDB) {
 	string firstName;
 	string lastName;
+	string fathersName;
+	int age;
+	int sexInt;
+	Sex sex;
+	string address;
+	int passportNumber;
+	int positionCodeInt;
+	PositionCode positionCode;
+
 	cout << "First name? ";
 	cin >> firstName;
 	cout << "Last name? ";
 	cin >> lastName;
+	cout << "Father's name? ";
+	cin >> fathersName;
+	cout << "Age? ";
+	cin >> age;
+	cout << "Sex (0 for Male, 1 for Female)? ";
+	cin >> sexInt;
+	sex = (sexInt == 0) ? Sex::Male : Sex::Female;
+	cout << "Address? ";
+	cin >> address;
+	cout << "Passport number? ";
+	cin >> passportNumber;
+	cout << "Position code (0 for Librarian, 1 for Cataloger, 2 for Archivist)? ";
+	cin >> positionCodeInt;
+	positionCode = static_cast<PositionCode>(positionCodeInt);
+
 	try {
-		inDB.addEmployee(firstName, lastName);
+		inDB.addEmployee(firstName, lastName, fathersName, age, sex, address, passportNumber, positionCode);
 	}
-	catch (std::exception ex) {
+	catch (exception& ex) {
 		cerr << "Unable to add new employee!" << endl;
 	}
 }
+
 void doFire(Database& inDB)
 {
 	int employeeNumber;
