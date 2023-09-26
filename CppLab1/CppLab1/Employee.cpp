@@ -8,6 +8,7 @@ namespace Records {
 	{
 		mFirstName = "";
 		mLastName = "";
+		fathersName = "";
 		mEmployeeNumber = -1;
 		mSalary = kDefaultStartingSalary;
 		fHired = false;
@@ -74,5 +75,61 @@ namespace Records {
 	bool Employee::getIsHired()
 	{
 		return fHired;
+	}
+
+	std::string Employee::getFathersName()  {
+		return fathersName;
+	}
+
+	void Employee::setFathersName( std::string& name) {
+		fathersName = name;
+	}
+
+	int Employee::getEmployeeCode()  {
+		return mEmployeeCode;
+	}
+
+	void Employee::setEmployeeCode(int code) {
+		mEmployeeCode = code;
+	}
+
+	int Employee::getAge()  {
+		return age;
+	}
+
+	void Employee::setAge(int employeeAge) {
+		age = employeeAge;
+	}
+
+	Sex Employee::getSex()  {
+		return sex;
+	}
+
+	void Employee::setSex(Sex employeeSex) {
+		sex = employeeSex;
+	}
+
+	std::string Employee::getAddress()  {
+		return address;
+	}
+
+	void Employee::setAddress( std::string& employeeAddress) {
+		address = employeeAddress;
+	}
+
+	int Employee::getPassportNumber()  {
+		return passportNumber;
+	}
+
+	void Employee::setPassportNumber(int number) {
+		passportNumber = number;
+	}
+
+	PositionCode Employee::getPositionCode()  {
+		return positionCode;
+	}
+
+	void Employee::setPositionCode(PositionCode code) {
+		positionCode = code;
 	}
 }
