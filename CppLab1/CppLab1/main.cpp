@@ -22,6 +22,8 @@ int main(int argc, char** argv)
 
 	employeeOnHeap->display();
 
+	delete employeeOnHeap;
+
 	bool done = false;
 	while (!done) {
 		int selection = displayMenu();
